@@ -1,0 +1,17 @@
+{
+	"extends": "@tsconfig/recommended",
+	"compilerOptions": {
+		"module": "NodeNext",
+		"baseUrl": ".",
+		"outDir": "dist",
+		"noEmitOnError": true,
+		"target": "ESNext",
+		"forceConsistentCasingInFileNames": true,
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"removeComments": true
+	},
+	"ts-node": { "esm": true },
+	"include": ["*.ts", ".*.ts"],
+	"exclude": ["node_modules"]
+}
