@@ -30,5 +30,8 @@
 		"@fastify/cors": "^8.2.0",
 		"@fastify/env": "^4.2.0",
 		"fastify": "^4.13.0"
+	},
+	"engines": {
+		"node": ">16"
 	}
 }
