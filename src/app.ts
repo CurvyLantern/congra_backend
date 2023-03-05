@@ -1,10 +1,19 @@
-import Fastify, { FastifyInstance, RouteShorthandOptions } from 'fastify';
-import { Server, IncomingMessage, ServerResponse } from 'http';
 import cors from '@fastify/cors';
+import Fastify, { FastifyInstance } from 'fastify';
 
-const app: FastifyInstance = Fastify({logger:true});
+import env from '@fastify/env';
+import EnvOptions from './plugins/env';
 
+const app: FastifyInstance = Fastify({ logger: true });
 
-export default app;
+const appReady = async () => {
+	await app
+		.register(cors, {
+			origin: '*',
+		})
+		.register(env, EnvOptions)
+		.after();
+	return app;
+};
 
-
+export default appReady;

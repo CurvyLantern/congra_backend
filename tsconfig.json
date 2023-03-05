@@ -10,5 +10,5 @@
 		"strict": true,
 		"skipLibCheck": true
 	},
-	"include": ["./*.js", "src/**/*.ts", "arbitary/**/*.ts","db/**/*.ts"]
+	"include": ["*.d.ts", "./*.js", "src/**/*.ts", "arbitary/**/*.ts", "db/**/*.ts"]
 }

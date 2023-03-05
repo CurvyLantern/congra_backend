@@ -1,16 +1,11 @@
-import app from './app';
+import appReady from './app';
 import { SAT_NAMES } from '../db/SAT_NAMES';
 import { TLE } from '../db/TLE2';
 import cors from '@fastify/cors';
 
 const start = async () => {
+	const app = await appReady();
 	try {
-		await app
-			.register(cors, {
-				origin: '*',
-			})
-			.after();
-
 		app.get('/', (req, res) => {
 			return { hello: 'world' };
 		});
@@ -22,7 +17,8 @@ const start = async () => {
 			return SAT_NAMES;
 		});
 
-		await app.listen({ port: 8000 });
+		// @ts-ignore
+		await app.listen({ port: process.env.PORT });
 
 		const address = app.server.address();
 		const port = typeof address === 'string' ? address : address?.port;
