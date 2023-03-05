@@ -11,6 +11,8 @@ const schema = {
 
 const EnvOptions = {
 	confkey: 'config',
+	dotenv: true,
 	schema,
+	data: process.env,
 };
 export default EnvOptions;
