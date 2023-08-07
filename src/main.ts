@@ -26,7 +26,7 @@ const start = async () => {
     });
 
     //@ts-ignore
-    await app.listen({ port: app.config.PORT });
+    await app.listen({ port: app.config.PORT, host: "0.0.0.0" });
 
     const address = app.server.address();
     const port = typeof address === "string" ? address : address?.port;
