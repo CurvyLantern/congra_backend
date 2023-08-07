@@ -8,18 +8,18 @@ type tleSchema = {
   sat_name: string,
   tle: [string, string]
 }
-const makeTleObj = (arr: string[], temp: tleSchema[] = []) => {
-	const totalLen = arr.length;
-	const len = totalLen / 3;
-	for (let i = 0; i < len; i++) {
-		const idx = i * 3;
-		const sat_name = arr[idx];
+export const makeTleObj = (arr: string[], temp: tleSchema[] = []) => {
+  const totalLen = arr.length;
+  const len = totalLen / 3;
+  for (let i = 0; i < len; i++) {
+    const idx = i * 3;
+    const sat_name = arr[idx];
     temp.push({
       sat_name,
-      tle:[arr[idx + 1], arr[idx + 2]]
-    })
-	}
-  return temp
+      tle: [arr[idx + 1], arr[idx + 2]],
+    });
+  }
+  return temp;
 };
 
 // const filePath = path.join(__dirname,"..", 'db','SAT_NAMES.ts');

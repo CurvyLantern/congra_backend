@@ -1,8 +1,8 @@
-import app from "./app";
-import { SAT_NAMES } from "../db/SAT_NAMES";
-import { TLE } from "../db/TLE2";
+import app from "./app.js";
+import { SAT_NAMES } from "../db/SAT_NAMES.js";
+import { TLE } from "../db/TLE2.js";
 import env from "@fastify/env";
-import EnvOptions from "./plugins/env";
+import EnvOptions from "./plugins/env.js";
 import cors from "@fastify/cors";
 
 const start = async () => {

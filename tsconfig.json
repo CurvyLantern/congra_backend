@@ -1,15 +1,23 @@
 {
-	"compilerOptions": {
-		"outDir": "dist",
-		"sourceMap": true,
-		"target": "ESNext",
-		"module": "commonjs",
-		"esModuleInterop": true,
-		"forceConsistentCasingInFileNames": true,
-		"noImplicitAny": true,
-		"strict": true,
-		"skipLibCheck": true
-	},
-
-	"include": ["*.d.ts", "./*.js", "src", "arbitary", "db"]
+  "compilerOptions": {
+    "noImplicitAny": true,
+    "removeComments": true,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "target": "ES6",
+    "module": "ESNext",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "sourceMap": false,
+    "outDir": "dist",
+    "strict": true
+  },
+  "ts-node": {
+    "esm": true,
+    "experimentalSpecifierResolution": "node"
+  },
+  "include": ["*.d.ts", "./*.js", "src", "arbitary", "db"],
+  "exclude": ["node_modules", "dist"]
 }
