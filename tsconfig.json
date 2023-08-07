@@ -2,7 +2,7 @@
 	"compilerOptions": {
 		"outDir": "dist",
 		"sourceMap": true,
-		"target": "esnext",
+		"target": "ESNext",
 		"module": "commonjs",
 		"esModuleInterop": true,
 		"forceConsistentCasingInFileNames": true,
@@ -10,5 +10,6 @@
 		"strict": true,
 		"skipLibCheck": true
 	},
-	"include": ["*.d.ts", "./*.js", "src/**/*.ts", "arbitary/**/*.ts", "db/**/*.ts"]
+
+	"include": ["*.d.ts", "./*.js", "src", "arbitary", "db"]
 }
